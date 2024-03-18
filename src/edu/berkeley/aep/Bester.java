@@ -8,6 +8,8 @@ public class Bester {
     }
 
     public Bestable best() {
+        if (quantities.length == 0)
+            return null;
         Bestable best = quantities[0];
         for (var quantity : quantities) {
             if (quantity.betterThan(best)) best = quantity;
