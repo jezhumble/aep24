@@ -22,10 +22,6 @@ public class Airport {
         routes.add(new Route(destination, cost));
     }
 
-    public void addRoute(Airport destination) {
-        children.add(destination);
-    }
-
     public int hopsTo(Airport destination) {
         return hopsTo(destination, new HashSet<>());
     }
@@ -57,6 +53,6 @@ public class Airport {
                 minHops = hops;
             }
         }
-        return minHops == UNREACHABLE ? UNREACHABLE : minHops;
+        return minHops;
     }
 }
